@@ -12,7 +12,6 @@ package crazyconnect4;
  */
 import java.io.IOException;
 import java.util.Scanner;
-import javax.swing.*;
 
 
 public class Game {
@@ -106,7 +105,7 @@ public class Game {
         Game myGame = new Game();   //Construye un objeto
         myGame.getName();           //Llama a la funcion getName
         myGame.displayGretting();   //Llama a la funcion displayHelp
-        myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
+        //myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
         
     }
 }
