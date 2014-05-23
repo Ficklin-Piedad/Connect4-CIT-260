@@ -6,6 +6,7 @@
 
 package crazyconnect4;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -89,12 +90,12 @@ public class Statistics
         }
     }
       
-    public static void main(String[] args) 
+    public static void main(String[] args) throws IOException 
     {   
         Game myGame = new Game();   //Construye un objeto
         myGame.getName();           //Llama a la funcion getName
         //myGame.displayHelp();       //Llama a la funcion displayHelp
         myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
-        myGame.gameStatistics(); 
+        //myGame.gameStatistics(); 
     }
 }
