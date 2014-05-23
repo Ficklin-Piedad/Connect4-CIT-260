@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author kylugo
+ * @author Piedad Ficklin
  */
 public class HelpMenuView 
 {
