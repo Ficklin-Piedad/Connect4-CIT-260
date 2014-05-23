@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 public class Game {
     String playerName;
-    String instructions = "This is the fabulous game \"Four in a Line\".\n\n"
+    String welcomeGretting = "This is the fabulous game \"Four in a Line\".\n\n"
             + "You will be playing against the computer or against another player.\n"
             + "The objective of this game is to place four of your chips in a \n"
             + "line, either horizontally, vertically or diagonally.\n"
@@ -42,11 +42,11 @@ public class Game {
     
     public void displayGretting() throws IOException {
         
-        //JOptionPane.showMessageDialog(null, instructions, "Welcome " + playerName, JOptionPane.PLAIN_MESSAGE);
+        //JOptionPane.showMessageDialog(null, welcomeGretting, "Welcome " + playerName, JOptionPane.PLAIN_MESSAGE);
         
         System.out.println("\nWelcome " + 
                 this.playerName +"!\n");        //Msj de Bienvenida
-        System.out.println(this.instructions);  //Instrucciones*/
+        System.out.println(this.welcomeGretting);
         
         computeScore();
     }
@@ -98,7 +98,6 @@ public class Game {
             System.out.println("\tGames Ties:" + gamesTies);
             System.out.println("\tPercent: " + gamePercent +"%");
         }
-        HelpMenuView();
     }
     
       
