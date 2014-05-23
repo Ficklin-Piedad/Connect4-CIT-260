@@ -98,6 +98,7 @@ public class Game {
             System.out.println("\tGames Ties:" + gamesTies);
             System.out.println("\tPercent: " + gamePercent +"%");
         }
+        HelpMenuView();
     }
     
       
