@@ -107,5 +107,8 @@ public class Game {
         myGame.displayGretting();   //Llama a la funcion displayHelp
         //myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
         
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.getInput();
+        
     }
 }
