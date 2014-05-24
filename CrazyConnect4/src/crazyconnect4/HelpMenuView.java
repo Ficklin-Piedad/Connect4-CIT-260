@@ -15,12 +15,11 @@ import java.util.Scanner;
 public class HelpMenuView 
 {
 
-    private final static String[][] menuItems = 
+    private final static String[][] helpMenuItems = 
     {
         {"I", "Instructions"},
         {"K", "Keyboard Functions"}, 
-        {"S", "Statistics"},
-        {"E", "Exit"},       
+        {"R", "Return to Main Menu"},       
     };
     
     // Create instance of the HelpMenuControl (action) class
@@ -51,26 +50,20 @@ public class HelpMenuView
                     break;
                 case "K":
                     this.helpMenuControl.displayKeyboardFunctions();
-                    break;
-                case "S":
-                    this.helpMenuControl.displayStatistics();
                     break;                  
-                case "E":
-                    this.helpMenuControl.displayExit();
-                    break;
                 default: 
                     System.out.println("Invalid command. Please enter a valid command.");
             }
-        } while (!command.equals("Q"));  
+        } while (!command.equals("R"));  
         
     }
 
-        // displays the help menu
+    // displays the help menu
     public final void display() 
     {
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (String[] menuItem : HelpMenuView.menuItems) {
+        for (String[] menuItem : HelpMenuView.helpMenuItems) {
             System.out.println("\t   " + menuItem[0] + "\t" + menuItem[1]);
         }
     }

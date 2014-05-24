@@ -19,22 +19,22 @@ public class HelpMenuControl {
 
     public void displayInstructions() 
     {     
-        System.out.println("\tThis will display the game instructions.");
+        System.out.println("\tThis will display the game instructions.\n");
     }
         
     public void displayKeyboardFunctions() 
     { 
-        System.out.println("\tThis will display what each key does during the game."); 
+        System.out.println("\tThis will display what each key does during the game.\n"); 
     }
             
     public void displayStatistics() 
     {     
-        System.out.println("\tThis will show the player statistics."); 
+        System.out.println("\tThis will show the player statistics.\n"); 
     }
     
     public void displayExit() 
     {     
-        System.out.println("\tThis will exit out of the Help Menu."); 
+        System.out.println("\tThis will exit out of the Help Menu.\n"); 
     }
     
 }

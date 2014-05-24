@@ -21,11 +21,6 @@ public class Game {
             + "The objective of this game is to place four of your chips in a \n"
             + "line, either horizontally, vertically or diagonally.\n"
             + "Good Luck! and enjoy this fun and challenging game.\n";
-    int gamesPlayed;
-    int gamesWon;
-    int gamesLost;
-    int gamesTies;
-    double gamePercent;
       
 
     public void getName() throws IOException{
@@ -48,7 +43,6 @@ public class Game {
                 this.playerName +"!\n");        //Msj de Bienvenida
         System.out.println(this.welcomeGretting);
         
-        computeScore();
     }
 
     /*public void musicStatus() throws IOException {
@@ -74,32 +68,7 @@ public class Game {
         }
         computeScore();
     }*/
-
-    
-    public void computeScore(){
-        gamesWon =4;
-        gamesLost = 3;
-        gamesTies = 2;
-        
-        gamesPlayed = gamesWon + gamesLost + gamesTies;
-        
-        if (gamesPlayed == 0)
-        {
-            System.out.println(this.playerName +", You Need to play first.");
-        }
-        else 
-        {
-            gamePercent = (double) (gamesWon) * 100 / (gamesPlayed); 
-            gamePercent = Math.round(gamePercent *100) / 100.0d;    //Redondea a dos decimales
-            System.out.println("Game Statics");
-            System.out.println("\tGames Played: " + gamesPlayed);
-            System.out.println("\tGames Won: " + gamesWon);
-            System.out.println("\tGames Lost:" + gamesLost);
-            System.out.println("\tGames Ties:" + gamesTies);
-            System.out.println("\tPercent: " + gamePercent +"%");
-        }
-    }
-    
+ 
       
     public static void main(String[] args) throws IOException {   
         Game myGame = new Game();   //Construye un objeto
@@ -107,8 +76,8 @@ public class Game {
         myGame.displayGretting();   //Llama a la funcion displayHelp
         //myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
         
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.getInput();
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.getInput();
         
     }
 }
