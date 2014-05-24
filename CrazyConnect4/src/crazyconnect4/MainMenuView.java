@@ -60,6 +60,9 @@ public class MainMenuView {
                 case "H":
                     this.mainMenuControl.displayHelp();
                     break;
+                case "Q":
+                    this.mainMenuControl.byeBye();
+                    break;
                 default: 
                     System.out.println("Invalid command. Please enter a valid command.");
             }

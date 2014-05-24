@@ -39,5 +39,8 @@ public class MainMenuControl {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.getInput();
     }
+    public void byeBye() {
+        System.out.println("\tThank for choose our game.\n");
+    }
 
 }
