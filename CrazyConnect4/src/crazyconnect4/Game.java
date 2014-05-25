@@ -13,19 +13,23 @@ package crazyconnect4;
 import java.io.IOException;
 import java.util.Scanner;
 
+   
 
 public class Game {
-    String playerName;
-    String instructions = "This is the fabulous game \"Four in a Line\".\n\n"
-            + "You will be playing against the computer or against another player.\n"
-            + "The objective of this game is to place four of your chips in a \n"
-            + "line, either horizontally, vertically or diagonally.\n"
-            + "Good Luck! and enjoy this fun and challenging game.\n";
+    
     int gamesPlayed;
     int gamesWon;
     int gamesLost;
     int gamesTies;
     double gamePercent;
+    
+    
+    String playerName;
+    String welcomeGretting = "This is the fabulous game \"Four in a Line\".\n\n"
+            + "You will be playing against the computer or against another player.\n"
+            + "The objective of this game is to place four of your chips in a \n"
+            + "line, either horizontally, vertically or diagonally.\n"
+            + "Good Luck! and enjoy this fun and challenging game.\n";
       
 
     public void getName() throws IOException{
@@ -42,13 +46,12 @@ public class Game {
     
     public void displayGretting() throws IOException {
         
-        //JOptionPane.showMessageDialog(null, instructions, "Welcome " + playerName, JOptionPane.PLAIN_MESSAGE);
+        //JOptionPane.showMessageDialog(null, welcomeGretting, "Welcome " + playerName, JOptionPane.PLAIN_MESSAGE);
         
         System.out.println("\nWelcome " + 
                 this.playerName +"!\n");        //Msj de Bienvenida
-        System.out.println(this.instructions);  //Instrucciones*/
+        System.out.println(this.welcomeGretting);
         
-        computeScore();
     }
 
     /*public void musicStatus() throws IOException {
@@ -75,6 +78,7 @@ public class Game {
         computeScore();
     }*/
 
+
     
     public void computeScore(){
         gamesWon =4;
@@ -98,15 +102,20 @@ public class Game {
             System.out.println("\tGames Ties:" + gamesTies);
             System.out.println("\tPercent: " + gamePercent +"%");
         }
-        HelpMenuView();
+        //this.HelpMenuView();
     }
     
+ 
+
       
     public static void main(String[] args) throws IOException {   
         Game myGame = new Game();   //Construye un objeto
         myGame.getName();           //Llama a la funcion getName
         myGame.displayGretting();   //Llama a la funcion displayHelp
         //myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
+        
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.getInput();
         
     }
 }
