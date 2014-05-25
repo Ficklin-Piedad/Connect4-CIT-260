@@ -16,6 +16,7 @@ import java.util.Scanner;
    
 
 public class Game {
+
     
     int gamesPlayed;
     int gamesWon;
@@ -24,6 +25,7 @@ public class Game {
     double gamePercent;
     
     
+
     String playerName;
     String welcomeGretting = "This is the fabulous game \"Four in a Line\".\n\n"
             + "You will be playing against the computer or against another player.\n"
@@ -79,6 +81,7 @@ public class Game {
     }*/
 
 
+
     
     public void computeScore(){
         gamesWon =4;
@@ -106,7 +109,6 @@ public class Game {
     }
     
  
-
       
     public static void main(String[] args) throws IOException {   
         Game myGame = new Game();   //Construye un objeto

@@ -65,6 +65,8 @@ public class MainMenuView {
                     break;
                 default: 
                     System.out.println("Invalid. Please enter a valid command.");
+
+
             }
         } while (!userInput.equals("Q"));  
         

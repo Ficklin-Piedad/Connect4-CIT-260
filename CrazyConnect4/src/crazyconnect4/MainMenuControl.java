@@ -27,7 +27,7 @@ public class MainMenuControl {
     
     public void displayStatistics(){
         Statistics statistics = new Statistics();
-        statistics.computeScore();
+        //statistics.computeScore();
         //System.out.println("\tThis will show the Statistics of game.\n");
     }
     
@@ -40,7 +40,10 @@ public class MainMenuControl {
         helpMenu.getInput();
     }
     public void byeBye() {
-        System.out.println("\tThanks for choose our game!\n");
+
+        System.out.println("\tThanks for choosing our game!\n");
+
+
     }
 
 }
