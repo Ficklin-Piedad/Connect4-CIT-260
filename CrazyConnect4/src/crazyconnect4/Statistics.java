@@ -6,9 +6,6 @@
 
 package crazyconnect4;
 
-import java.io.IOException;
-import java.util.Scanner;
-
 /**
  *
  * @author lugoky
@@ -22,14 +19,15 @@ public class Statistics
     double gamePercent;
 
 
-    public void Statistics() 
+    public Statistics() {
+        
+    }
+
+
+
+    public void computeScore()
     {
-
-
-
-    public computeScore()
-    {
-        gamesWon =4;
+        gamesWon = 4;
         gamesLost = 3;
         gamesTies = 2;
         
