@@ -12,6 +12,8 @@ package crazyconnect4;
  */
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
    
 
@@ -84,6 +86,7 @@ public class Game {
 
     
     public void computeScore(){
+        //Sound.BACK.loop();
         gamesWon =4;
         gamesLost = 3;
         gamesTies = 2;
@@ -114,10 +117,16 @@ public class Game {
         Game myGame = new Game();   //Construye un objeto
         myGame.getName();           //Llama a la funcion getName
         myGame.displayGretting();   //Llama a la funcion displayHelp
-        //myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
+        SoundTest soundtest = new SoundTest();
+        try {
+            soundtest.backgroundMusic();
+            //myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.getInput();
-        
+
     }
 }
