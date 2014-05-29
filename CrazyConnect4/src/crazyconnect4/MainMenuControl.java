@@ -42,6 +42,7 @@ public class MainMenuControl {
     public void byeBye() {
 
         System.out.println("\tThanks for choosing our game!\n");
+        System.exit(0);
 
 
     }
