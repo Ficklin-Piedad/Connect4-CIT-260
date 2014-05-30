@@ -30,7 +30,7 @@ public class UserInput {
             userIn += 1;
 
             if (userIn < 11) {
-                continue;
+                
             }
         }
         if (userIn > 10) {
