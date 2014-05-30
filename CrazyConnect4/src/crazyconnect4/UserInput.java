@@ -22,18 +22,19 @@ public class UserInput {
 
     public void playerInput() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter a value: ");
+        System.out.println("Enter a value between 1 and 10: ");
         this.usInput = input.nextLine();
         int userIn = Integer.parseInt(usInput);
 
         while (userIn >=1 && userIn <= 10) {
-            System.out.println("The value entered is: " + userIn);
+            System.out.println("This is a counter: " + userIn);
             count +=2;
             userIn += 1;
+            if (userIn == 10) continue;
             
         }
         if (userIn > 10 && count == 1) {
-            System.out.println("The value entered is incorrect. Try again");
+            System.out.println("The value entered is incorrect.");
         }
 
     }
