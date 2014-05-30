@@ -38,7 +38,7 @@ public class StatisticsMenuView
         
         do {
             
-            this.StatisticsMenuView(); // display the menu
+            //this.StatisticsMenuView(); // display the menu
             
             // get commaned entered
             userInput = inFile.nextLine();
