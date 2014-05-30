@@ -15,6 +15,7 @@ import java.util.Scanner;
 public class UserInput {
 
     String usInput;
+    int count = 1;
 
     public void userInput() {
     }
@@ -25,15 +26,13 @@ public class UserInput {
         this.usInput = input.nextLine();
         int userIn = Integer.parseInt(usInput);
 
-        while (userIn < 11 && userIn > 0) {
+        while (userIn >=1 && userIn <= 10) {
             System.out.println("The value entered is: " + userIn);
+            count +=2;
             userIn += 1;
-
-            if (userIn < 11) {
-                continue;
-            }
+            
         }
-        if (userIn > 10) {
+        if (userIn > 10 && count == 1) {
             System.out.println("The value entered is incorrect. Try again");
         }
 
