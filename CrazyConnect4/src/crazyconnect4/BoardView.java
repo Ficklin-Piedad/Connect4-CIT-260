@@ -12,7 +12,7 @@ package crazyconnect4;
  */
 public class BoardView 
 {
-    void viewBoard()  
+    void ViewBoard()  
     {
         int i;
         int j;
@@ -23,6 +23,12 @@ public class BoardView
                 System.out.print(i);
             System.out.print(j);
         }
+    }
+    
+    public static void main(String[] args) 
+    {
+        BoardView boardview = new BoardView();
+        boardview.ViewBoard();
     }
     
 }
