@@ -47,7 +47,7 @@ public class Game {
 
         //JOptionPane.showMessageDialog(null, welcomeGretting, "Welcome " + playerName, JOptionPane.PLAIN_MESSAGE);
         System.out.println("\nWelcome "
-                + this.playerName + "!\n");        //Msj de Bienvenida
+                + this.playerName + "!\n");        //Welcome Message
         System.out.println(this.welcomeGretting);
 
     }
@@ -58,7 +58,7 @@ public class Game {
             // prompt for input
             Scanner input = new Scanner(System.in);
             System.out.println("\n" + jugador
-                    + ", do you want to hear music while paying this game? "
+                    + ", do you want to hear music while playing this game? "
                     + "\nPlease, press Y or N to continue.");
             this.flagMusic = input.nextLine(); //assing the input to variable
 
@@ -67,7 +67,7 @@ public class Game {
                 continue;
             } 
             else {
-                upperInput = flagMusic.substring(0, 1).toUpperCase();
+                upperInput = flagMusic.substring(0, 1).toUpperCase(); //UpperCase
                 if (upperInput.equals("Y") || upperInput.equals("N")) {
                     break;
                 }
@@ -77,16 +77,51 @@ public class Game {
         if (upperInput.equalsIgnoreCase("Y")) {
             SoundTest soundtest = new SoundTest();
             try {
-                System.out.println("Enabling Music...");
+                System.out.println("Enabling Music...\n");
                 soundtest.backgroundMusic();
             } catch (InterruptedException ex) {
                 Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);
             }
         }//end WHILE 
     }//end playMusic Method
+    
+    public static String[][] createBoard() {
+        String[][] pattern = new String[8][17];
+
+        for (int i = 0; i < pattern.length; i++) {
+            for (int j = 0; j < pattern[i].length; j++) {
+                if (j % 2 == 0) 
+                {
+                    pattern[i][j] = "|";
+                } 
+                else {
+                    pattern[i][j] = " ";
+                }
+
+                if (i == 7) {
+                    pattern[i][j] = "-";
+                }
+            }
+        }
+        return pattern;
+    }
+
+    public static void printBoard(String[][] pattern) {
+        String header = " 0 1 2 3 4 5 6 7";
+        
+        System.out.println(header);
+        System.out.println("----------------- ");
+        
+        for (int i = 0; i < pattern.length; i++) {
+            for (int j = 0; j < pattern[i].length; j++) {
+                System.out.print(pattern[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println(header);
+    }
 
     public void computeScore() {
-        //Sound.BACK.play();
 
         gamesWon = 4;
         gamesLost = 3;
@@ -115,9 +150,10 @@ public class Game {
         myGame.displayGretting();   //Llama a la funcion displayHelp
         myGame.playMusic();
         //myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
-
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.getInput();
+        String[][] pattern = createBoard();
+        printBoard(pattern);
+        //MainMenuView mainMenu = new MainMenuView();
+        //mainMenu.getInput();
 
     }
 }
