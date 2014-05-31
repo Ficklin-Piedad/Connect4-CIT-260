@@ -21,8 +21,9 @@ public class Game {
     int gamesLost;
     int gamesTies;
     double gamePercent;
-    Boolean musicStatus = false;
+    boolean musicStatus = false;
     String flagMusic;
+    String upperInput;
 
     String playerName;
     String welcomeGretting = "This is the fabulous game \"Four in a Line\".\n\n"
@@ -52,62 +53,37 @@ public class Game {
     }
 
     public void playMusic() {
-        Boolean bandera = true;
-
-        while (bandera) {
+        String jugador = playerName.toUpperCase();
+        while (true) {
             // prompt for input
             Scanner input = new Scanner(System.in);
-            System.out.println("\n\t" + playerName
+            System.out.println("\n" + jugador
                     + ", do you want to hear music while paying this game? "
-                    + "Please, press Y/N.");
+                    + "\nPlease, press Y or N to continue.");
             this.flagMusic = input.nextLine();
 
-            // no marker entered?
-            if (flagMusic != null || flagMusic.length() > 1) {
-                bandera = false;
+            // no input entered?
+            if (flagMusic == null || flagMusic.length() < 1) {
                 continue;
+            } else {
+                upperInput = flagMusic.substring(0, 1).toUpperCase();
+                if (upperInput.equals("Y") || upperInput.equals("N")) {
+                    break;
+                }
             }
-            else {
-               return;
-            }   
-        }
-        if (flagMusic == "Y") {
-            musicStatus = true;
         }
         //Play background music
-        if (musicStatus) {
+        if (upperInput.equalsIgnoreCase("Y")) {
             SoundTest soundtest = new SoundTest();
             try {
+                System.out.println("Enabling Music...");
                 soundtest.backgroundMusic();
             } catch (InterruptedException ex) {
                 Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
-    }
+        }//end WHILE  
+    }//end playMusic Method
 
-    /*public void musicStatus() throws IOException {
-
-     char musicOnOff;
-
-     System.out.println("Music Option :"); 
-     System.out.println("Do you want hear the background music?");
-     System.out.println("    1. Yes");
-     System.out.println("    2. No");
-     System.out.println("Choose one");
-     musicOnOff = (char) System.in.read();
-
-     switch (musicOnOff) {
-     case '1':
-     Sound.BACK.loop();
-     break;
-     case '2':
-     Sound.BACK.stop();
-     break;
-     default:
-     System.out.print("Selection not found.");
-     }
-     computeScore();
-     }*/
     public void computeScore() {
         //Sound.BACK.play();
 
