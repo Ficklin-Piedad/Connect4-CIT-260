@@ -60,12 +60,13 @@ public class Game {
             System.out.println("\n" + jugador
                     + ", do you want to hear music while paying this game? "
                     + "\nPlease, press Y or N to continue.");
-            this.flagMusic = input.nextLine();
+            this.flagMusic = input.nextLine(); //assing the input to variable
 
             // no input entered?
             if (flagMusic == null || flagMusic.length() < 1) {
                 continue;
-            } else {
+            } 
+            else {
                 upperInput = flagMusic.substring(0, 1).toUpperCase();
                 if (upperInput.equals("Y") || upperInput.equals("N")) {
                     break;
@@ -81,7 +82,7 @@ public class Game {
             } catch (InterruptedException ex) {
                 Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }//end WHILE  
+        }//end WHILE 
     }//end playMusic Method
 
     public void computeScore() {
