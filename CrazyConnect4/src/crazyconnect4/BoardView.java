@@ -19,9 +19,13 @@ public class BoardView
 
         for (i = 0; i < 10; i++) 
         {
-            for (j = 0; j < 10; j++) 
-                System.out.print(i);
-            System.out.print(j);
+            System.out.print(i);
+            System.out.println();
+        }
+            
+        for (j = 0; j < 10; j++)
+        {
+            System.out.print(" " + j);
         }
     }
     
