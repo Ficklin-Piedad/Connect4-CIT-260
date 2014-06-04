@@ -68,8 +68,8 @@ public class Game {
             } 
             else {
                 upperInput = flagMusic.substring(0, 1).toUpperCase(); //UpperCase
-                if (upperInput.equals("Y") || upperInput.equals("N")) {
-                    break;
+                    if (upperInput.equals("Y") || upperInput.equals("N")) {
+                        break;
                 }
             }
         }
@@ -78,7 +78,7 @@ public class Game {
             SoundTest soundtest = new SoundTest();
             try {
                 System.out.println("Enabling Music...\n");
-                soundtest.backgroundMusic();
+                soundtest.backgroundMusicPlay();
             } catch (InterruptedException ex) {
                 Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -148,12 +148,14 @@ public class Game {
         Game myGame = new Game();   //Construye un objeto
         myGame.getName();           //Llama a la funcion getName
         myGame.displayGretting();   //Llama a la funcion displayHelp
-        myGame.playMusic();
+        //myGame.playMusic();
         //myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
-        String[][] pattern = createBoard();
-        printBoard(pattern);
+        //String[][] pattern = createBoard();
+        //printBoard(pattern);
         //MainMenuView mainMenu = new MainMenuView();
         //mainMenu.getInput();
+        SortPrinter sortprinter = new SortPrinter();
+        sortprinter.caller();
 
     }
 }
