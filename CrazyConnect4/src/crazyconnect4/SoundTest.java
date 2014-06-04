@@ -21,7 +21,7 @@ public class SoundTest {
      *
      * @throws InterruptedException
      */
-    public void backgroundMusic() throws InterruptedException {
+    public void backgroundMusicPlay() throws InterruptedException {
                 URL url = SoundTest.class.getResource("NEON.wav");
 		AudioClip clip = Applet.newAudioClip(url);
 		clip.loop();
