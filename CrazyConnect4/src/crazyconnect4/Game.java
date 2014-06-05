@@ -147,7 +147,7 @@ public class Game {
     public static void main(String[] args) throws IOException {
         Game myGame = new Game();   //Construye un objeto
         myGame.getName();           //Llama a la funcion getName
-        myGame.displayGretting();   //Llama a la funcion displayHelp
+        //myGame.displayGretting();   //Llama a la funcion displayHelp
         //myGame.playMusic();
         //myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
         //String[][] pattern = createBoard();
