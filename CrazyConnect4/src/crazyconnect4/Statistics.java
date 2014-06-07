@@ -6,6 +6,8 @@
 
 package crazyconnect4;
 
+import java.io.IOException;
+
 /**
  *
  * @author lugoky
@@ -23,7 +25,11 @@ public class Statistics
         
     }
 
+    public void displayHighScore() throws IOException {
 
+        SortScores sortscores = new SortScores();
+        sortscores.caller();
+    }
 
     public void computeScore()
     {

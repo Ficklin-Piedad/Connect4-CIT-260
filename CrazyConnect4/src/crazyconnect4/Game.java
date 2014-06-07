@@ -156,6 +156,8 @@ public class Game {
         //mainMenu.getInput();
         SortPrinter sortprinter = new SortPrinter();
         sortprinter.caller();
-
+        
+        SortScores sortscores = new SortScores();
+        sortscores.caller();
     }
 }
