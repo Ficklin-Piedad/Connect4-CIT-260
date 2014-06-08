@@ -20,7 +20,7 @@ public class SortPrinter {
     @SuppressWarnings("empty-statement")
     SortPrinter() {
     }
-    public void caller(){
+    public void caller() throws IOException{
 
         //variables
         boolean valid = true;
@@ -46,8 +46,10 @@ public class SortPrinter {
                 }
             }
         }
+        
         //option 1
         if (choose.equals("1")) {
+            Runtime.getRuntime().exec("clear");
             //DUMMY data
             int[] arreglo = {4, 2, 7, 1, 9, 14, 12, 42, 19, 23, 6, 16, 3, 15, 24};
             System.out.println("Using \"DUMMY\" data...");
