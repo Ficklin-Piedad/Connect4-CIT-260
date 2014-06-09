@@ -85,7 +85,7 @@ public class Game {
         }//end WHILE 
     }//end playMusic Method
     
-    public static String[][] createBoard() {
+    public static void createBoard() {
         String[][] pattern = new String[8][17];
 
         for (int i = 0; i < pattern.length; i++) {
@@ -101,9 +101,10 @@ public class Game {
                 if (i == 7) {
                     pattern[i][j] = "-";
                 }
-            }
-        }
-        return pattern;
+            } 
+        }printBoard(pattern);
+        //return pattern;
+       
     }
 
     public static void printBoard(String[][] pattern) {
@@ -147,17 +148,18 @@ public class Game {
     public static void main(String[] args) throws IOException {
         Game myGame = new Game();   //Construye un objeto
         myGame.getName();           //Llama a la funcion getName
-        //myGame.displayGretting();   //Llama a la funcion displayHelp
-        //myGame.playMusic();
+        myGame.displayGretting();   //Llama a la funcion displayHelp
+        myGame.playMusic();
         //myGame.computeScore();      //Llama a la funcion que muestra estadistica del juego
         //String[][] pattern = createBoard();
+        createBoard();
         //printBoard(pattern);
         //MainMenuView mainMenu = new MainMenuView();
         //mainMenu.getInput();
-        SortPrinter sortprinter = new SortPrinter();
-        sortprinter.caller();
+        //SortPrinter sortprinter = new SortPrinter();
+        //sortprinter.caller();
         
-        SortScores sortscores = new SortScores();
-        sortscores.caller();
+        //SortScores sortscores = new SortScores();
+        //sortscores.caller();
     }
 }
