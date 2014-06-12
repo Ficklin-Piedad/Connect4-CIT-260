@@ -31,7 +31,7 @@ public class SortScores
         //variables
         boolean valid = true;
         String choose = null;
-        String invalidEntry = "Wrong Entry, Please try again.\n";
+        String invalidEntry = "\nWrong Entry, Please try again.\n";
 
         while (valid) {
             //user entry
