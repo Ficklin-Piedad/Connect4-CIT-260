@@ -7,6 +7,7 @@
 package crazyconnect4;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  *
@@ -14,46 +15,60 @@ import java.io.IOException;
  */
 public class Statistics 
 {    
-    int gamesPlayed;
-    int gamesWon;
-    int gamesLost;
-    int gamesTies;
+    String gamesPlayed;
+    String gamesWon;
+    String gamesLost;
+    String gamesTies;
     double gamePercent;
+    double sumPlayed;
 
 
     public Statistics() {
         
     }
 
-    public void displayHighScore() throws IOException {
-
-        SortScores sortscores = new SortScores();
-        sortscores.caller();
-    }
-
     public void computeScore()
     {
-        gamesWon = 4;
-        gamesLost = 3;
-        gamesTies = 2;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the amount of games played: ");
+        this.gamesPlayed = input.nextLine();
+        int played = Integer.parseInt(gamesPlayed);
         
-        gamesPlayed = gamesWon + gamesLost + gamesTies;
+        System.out.println("Enter the amount of games won: ");
+        this.gamesWon = input.nextLine();
+        int won = Integer.parseInt(gamesWon);
         
-        if (gamesPlayed == 0)
+        System.out.println("Enter the amount of games lost: ");
+        this.gamesPlayed = input.nextLine();
+        int lost = Integer.parseInt(gamesLost);
+        
+        System.out.println("Enter the amount of games tied: ");
+        this.gamesPlayed = input.nextLine();
+        int tied = Integer.parseInt(gamesTies);
+        
+        sumPlayed = won + lost + tied;
+        
+        if (sumPlayed > played || sumPlayed == 0)
         {
-            System.out.println("You Need to play first.");
+            System.out.println("The numbers are all wrong! Try again!");
         }
         else 
         {
-            gamePercent = (double) (gamesWon) * 100 / (gamesPlayed); 
+            gamePercent = (double) (won) * 100 / (played); 
             gamePercent = Math.round(gamePercent *100) / 100.0d;    //Redondea a dos decimales
             System.out.println("Game Statics");
-            System.out.println("\tGames Played: " + gamesPlayed);
-            System.out.println("\tGames Won: " + gamesWon);
-            System.out.println("\tGames Lost:" + gamesLost);
-            System.out.println("\tGames Ties:" + gamesTies);
+            System.out.println("\tGames Played: " + played);
+            System.out.println("\tGames Won: " + won);
+            System.out.println("\tGames Lost:" + lost);
+            System.out.println("\tGames Tied:" + tied);
             System.out.println("\tPercent: " + gamePercent +"%");
         }
+    }
+    
+    public static void main(String[] args) throws IOException {
+        
+        Statistics statistics = new Statistics();
+            statistics.computeScore();
     }
 }
 
