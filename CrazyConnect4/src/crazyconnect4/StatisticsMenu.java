@@ -1,4 +1,5 @@
 /*
+
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -39,7 +40,7 @@ public class StatisticsMenu {
     {
     }
     
-    public void menu()
+    public void menu() throws IOException
     {
         System.out.println(this.greeting);
 
@@ -94,23 +95,23 @@ public class StatisticsMenu {
             statistics.computeScore();
             }
             
-            else if (choose.equals("4")) {
-            //user array
-            
+            else if (choose.equals("4")) 
+            {
+                System.out.println("\nOption 4 Coming Soon!\n");
             }
             
-            else if (choose.equals("5")) {
-            //user array
-            
+            else if (choose.equals("5")) 
+            {
+                System.out.println("\nOption 5 Coming Soon!\n");    
             }
             
-            else if (choose.equals("6")) {
-            //user array
-            
+            else if (choose.equals("6")) 
+            {
+                System.out.println("\nOption 6 Coming Soon!\n");
             }
             
-            else if (choose.equals("7")) {
-            //user array
+            else if (choose.equals("7")) 
+            {
                 System.out.println("\nCome back soon!\n");
             }
 

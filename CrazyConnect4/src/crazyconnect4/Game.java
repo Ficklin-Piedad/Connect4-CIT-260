@@ -122,7 +122,7 @@ public class Game {
         System.out.println(header);
     }
 
-    public void computeScore() {
+    /*public void computeScore() {
 
         gamesWon = 4;
         gamesLost = 3;
@@ -143,7 +143,7 @@ public class Game {
             System.out.println("\tPercent: " + gamePercent + "%");
         }
         //this.HelpMenuView();
-    }
+    }*/
 
     public static void main(String[] args) throws IOException {
         Game myGame = new Game();   //Construye un objeto
