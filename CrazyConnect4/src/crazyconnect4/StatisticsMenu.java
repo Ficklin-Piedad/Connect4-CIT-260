@@ -21,7 +21,7 @@ public class StatisticsMenu {
     
     int[] array;
     String greeting = "Welcome to the Statistics Menu!\n "
-            + "Choose what you would like to view!\n";
+            + "Choose what you would like to view.\n";
 
     @SuppressWarnings("empty-statement")
     
