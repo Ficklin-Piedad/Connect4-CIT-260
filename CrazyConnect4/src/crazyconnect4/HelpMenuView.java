@@ -12,8 +12,10 @@ import java.util.Scanner;
  *
  * @author Piedad Ficklin
  */
-public class HelpMenuView 
-{
+import java.io.Serializable;
+import java.util.Objects;
+
+public class HelpMenuView implements Serializable{
 
     private final static String[][] helpMenuItems = 
     {
@@ -26,12 +28,12 @@ public class HelpMenuView
     private final HelpMenuControl helpMenuControl = new HelpMenuControl();
     
     // default constructor
-    public HelpMenuView() {
+    private HelpMenuView() {
         
     } 
     
     // display the help menu and get the end users input selection
-    public void getInput() {       
+    private void getInput() {       
               
         String command;
         Scanner inFile = new Scanner(System.in);
@@ -59,7 +61,7 @@ public class HelpMenuView
     }
 
     // displays the help menu
-    public final void display() 
+    private final void display() 
     {
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
@@ -67,5 +69,28 @@ public class HelpMenuView
             System.out.println("\t   " + menuItem[0] + "\t" + menuItem[1]);
         }
     }
+
+       @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + Objects.hashCode(this.helpMenuControl);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final HelpMenuView other = (HelpMenuView) obj;
+        if (!Objects.equals(this.helpMenuControl, other.helpMenuControl)) {
+            return false;
+        }
+        return true;
+    }
     
 }
+
