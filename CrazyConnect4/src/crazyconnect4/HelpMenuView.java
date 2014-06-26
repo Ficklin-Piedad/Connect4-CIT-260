@@ -12,6 +12,11 @@ import java.util.Scanner;
  *
  * @author Piedad Ficklin
  */
+public class HelpMenuView extends Menu{
+    public static final String INSTRUCTIONS = "INSTRUCTIONS";
+    public static final String KEYBOARD = "KEYBOARD";
+    public static final String RETURN = "RETURN";
+}
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -23,7 +28,13 @@ public class HelpMenuView implements Serializable{
         {"K", "Keyboard Functions"}, 
         {"R", "Return to Main Menu"},       
     };
-    
+    public HelpMenuView(){
+        super(HelpMenuView.helpMenuItems);
+    }
+    @Override
+    public String executeCommands(object object){
+        
+    }
     // Create instance of the HelpMenuControl (action) class
     private final HelpMenuControl helpMenuControl = new HelpMenuControl();
     
@@ -61,7 +72,7 @@ public class HelpMenuView implements Serializable{
     }
 
     // displays the help menu
-    private final void display() 
+    private final static void display() 
     {
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
