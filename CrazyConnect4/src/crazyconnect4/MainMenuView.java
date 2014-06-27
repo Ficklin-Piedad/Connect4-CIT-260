@@ -18,7 +18,7 @@ public class MainMenuView {
         
     }
     
-    private final static String[][] mainMenuItems = {
+    public final static String[][] mainMenuItems = {
         {"P", "One Player"},
         {"T", "Two Players"}, 
         {"S", "Statistics"}, 

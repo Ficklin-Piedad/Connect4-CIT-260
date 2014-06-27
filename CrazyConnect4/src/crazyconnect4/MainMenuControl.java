@@ -36,8 +36,8 @@ public class MainMenuControl {
     }
     
     public void displayHelp() {
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.getInput();
+        MainMenuView menu = new MainMenuView();
+        menu.getInput();
     }
     public void byeBye() {
 
