@@ -13,6 +13,8 @@ import java.io.IOException;
  * @author kylugo
  */
 class HelpMenu extends Menu {
+    
+    boolean whatMenu = false;
 
     static final String[][] helpMenuItems = {
         {"I", "Display Instructions"},
@@ -23,12 +25,12 @@ class HelpMenu extends Menu {
     private final HelpMenuControl helpMenuControl = new HelpMenuControl();
 
     @Override
-    public void getInput2() {
-        super.getInput2(); //To change body of generated methods, choose Tools | Templates.
+    public void getInput(boolean whatMenu) {
+        super.getInput(whatMenu); //To change body of generated methods, choose Tools | Templates.
 
         do {
 
-            this.displayMenu2(); // display the menu
+            this.displayMenu(whatMenu); // display the menu
 
             // get commaned entered
             userInput = inFile.nextLine();
@@ -55,7 +57,7 @@ class HelpMenu extends Menu {
     }
         public static void main(String[] args) throws IOException, InterruptedException {
         HelpMenu menu = new HelpMenu();
-        menu.getInput();
+        menu.getInput(false);
         
     }//end Help
 }
