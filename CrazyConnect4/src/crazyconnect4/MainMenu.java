@@ -13,6 +13,8 @@ import java.io.IOException;
  * @author henrydiazlds
  */
 class MainMenu extends Menu {
+    
+    boolean whatMenu = true;
 
     static final String[][] mainMenuItems = {
         {"P", "One Player"},
@@ -25,12 +27,12 @@ class MainMenu extends Menu {
     private final MainMenuControl mainMenuControl = new MainMenuControl();
 
     @Override
-    public void getInput() {
-        super.getInput(); //To change body of generated methods, choose Tools | Templates.
+    public void getInput(boolean whatMenu) {
+        super.getInput(whatMenu); //To change body of generated methods, choose Tools | Templates.
 
         do {
 
-            this.displayMenu(); // display the menu
+            this.displayMenu(whatMenu); // display the menu
 
             // get commaned entered
             userInput = inFile.nextLine();
@@ -63,7 +65,7 @@ class MainMenu extends Menu {
     }
         public static void main(String[] args) throws IOException, InterruptedException {
         MainMenu menu = new MainMenu();
-        menu.getInput();
+        menu.getInput(true);
         
     }//end Main
 }

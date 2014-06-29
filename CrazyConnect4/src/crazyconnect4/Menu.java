@@ -16,8 +16,8 @@ public class Menu {
 
     }
 
-    public void getInput() {
-        this.displayMenu();
+    public void getInput(boolean whichMenu) {
+        this.displayMenu(whichMenu);
 
         // get commaned entered
         userInput = inFile.nextLine();
@@ -26,11 +26,18 @@ public class Menu {
     }
 
     // displays the help menu
-    public final void displayMenu() {
+    public final void displayMenu(boolean whichMenu) {
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (String[] menuItem : MainMenu.mainMenuItems) {
-            System.out.println("\t   " + menuItem[0] + "\t" + menuItem[1]);
+        if (whichMenu) {
+
+            for (String[] menuItem : MainMenu.mainMenuItems) {
+                System.out.println("\t   " + menuItem[0] + "\t" + menuItem[1]);
+            }
+        } else {
+            for (String[] menuItem : HelpMenu.helpMenuItems) {
+                System.out.println("\t   " + menuItem[0] + "\t" + menuItem[1]);
+            }
         }
     }
 }
