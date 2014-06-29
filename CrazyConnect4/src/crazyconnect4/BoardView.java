@@ -3,36 +3,50 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package crazyconnect4;
 
 /**
  *
  * @author kylugo
  */
-public class BoardView 
-{
-    void ViewBoard()  
-    {
-        int i;
-        int j;
+public class BoardView {
 
-        for (i = 0; i < 10; i++) 
-        {
-            System.out.print(i);
+    public static String[][] boardView() {
+
+        String[][] f = new String[7][15];
+
+        for (int i = 0; i < f.length; i++) {
+
+            for (int j = 0; j < f[i].length; j++) {
+
+                if (j % 2 == 0) {
+                    f[i][j] = "|";
+                } else {
+                    f[i][j] = " ";
+                }
+
+                if (i == 6) {
+                    f[i][j] = "-";
+                }
+            }
+
+        }
+        return f;
+    }
+
+    public static void printBoard(String[][] f) {
+        String header = " 1 2 3 4 5 6 7";
+        
+        System.out.println(header);
+        
+        System.out.println("---------------");
+        for (int i = 0; i < f.length; i++) {
+            for (int j = 0; j < f[i].length; j++) {
+                System.out.print(f[i][j]);
+            }
             System.out.println();
         }
-            
-        for (j = 0; j < 10; j++)
-        {
-            System.out.print(" " + j);
-        }
+        System.out.println(header);
     }
-    
-    public static void main(String[] args) 
-    {
-        BoardView boardview = new BoardView();
-        boardview.ViewBoard();
-    }
-    
+
 }
