@@ -13,5 +13,6 @@ package ConnectFour.enumpackage;
 public enum GameStatus {
     
     //here goes something
+    //here goes something else
     
 }
