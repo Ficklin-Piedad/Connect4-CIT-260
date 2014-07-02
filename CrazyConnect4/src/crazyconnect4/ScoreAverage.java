@@ -23,7 +23,7 @@ public class ScoreAverage {
     
     @SuppressWarnings("empty-statement")
             
-    ScoreAverage() 
+    public ScoreAverage() 
     {
     }
     

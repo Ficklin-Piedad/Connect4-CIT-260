@@ -20,7 +20,7 @@ public class SortScores
     String greeting = "Welcome! We will display your scores from lowest to highest.\n";
 
     @SuppressWarnings("empty-statement")
-    SortScores() 
+    public SortScores() 
     {
     }
     
