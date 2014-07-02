@@ -1,4 +1,4 @@
-package crazyconnect4;
+package ConnectFour.menupackage;
 
 import java.io.IOException;
 

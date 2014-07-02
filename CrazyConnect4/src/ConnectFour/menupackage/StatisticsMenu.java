@@ -5,8 +5,11 @@
  * and open the template in the editor.
  */
 
-package crazyconnect4;
+package ConnectFour.menupackage;
 
+import crazyconnect4.ScoreAverage;
+import crazyconnect4.SortScores;
+import crazyconnect4.Statistics;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;

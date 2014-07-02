@@ -1,5 +1,6 @@
-package crazyconnect4;
+package ConnectFour.menupackage;
 
+import ConnectFour.menupackage.MainMenu;
 import java.io.IOException;
 import java.util.Scanner;
 

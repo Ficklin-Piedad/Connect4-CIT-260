@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package crazyconnect4;
+package ConnectFour.menupackage;
+
+import ConnectFour.viewpackage.MainMenuView;
+import crazyconnect4.Statistics;
 
 /**
  *
