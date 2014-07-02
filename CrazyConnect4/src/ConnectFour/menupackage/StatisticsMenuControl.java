@@ -35,8 +35,8 @@ public class StatisticsMenuControl
     }
     
     public void displayHelp() {
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.getInput();
+        HelpMenu helpMenu = new HelpMenu();
+        helpMenu.getInput(true);
     }
     public void byeBye() {
         System.out.println("\tThanks for choose our game!\n");
