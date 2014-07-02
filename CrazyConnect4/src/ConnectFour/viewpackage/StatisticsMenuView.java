@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-package crazyconnect4;
+package ConnectFour.viewpackage;
 
+import ConnectFour.menupackage.StatisticsMenuControl;
 import java.util.Scanner;
 
 /**
