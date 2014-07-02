@@ -13,5 +13,6 @@ package ConnectFour.interfacepackage;
 public interface EnterInfo {
     
     //here goes something
+    //and something else
     
 }

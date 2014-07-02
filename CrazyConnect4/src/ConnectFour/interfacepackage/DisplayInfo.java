@@ -15,5 +15,6 @@ public interface DisplayInfo {
    void display();
    
     //here goes something else
+   //and something else
    
 }
