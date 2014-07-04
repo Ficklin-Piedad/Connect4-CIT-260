@@ -8,12 +8,8 @@ package ConnectFour.enumpackage;
 
 /**
  *
- * @author kylugo
+ * @author henrydiazlds
  */
 public enum GameStatus {
-    
-    //here goes something
-    //here goes something else
-    //and something else
     
 }
