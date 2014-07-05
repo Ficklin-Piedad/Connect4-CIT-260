@@ -1,4 +1,4 @@
-package crazyconnect4;
+package ConnectFour.Boardpackage;
 
 
 import java.util.Scanner;

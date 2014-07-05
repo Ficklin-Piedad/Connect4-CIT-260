@@ -6,6 +6,8 @@
 
 package crazyconnect4;
 
+import ConnectFour.Boardpackage.Board;
+
 /**
  *
  * @author Piedad Ficklin
